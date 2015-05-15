@@ -50,14 +50,14 @@ var square = document.createElement("div");
 }
 var makeGrid = function() {
 var bod = document.querySelector("body");
-for (var i =0 ; i<30; i++)
+for (var i =0 ; i<150; i++)
 {
 	for (var j = 0; j < 8; j++)
 	{
 		
 		var square = document.createElement("div");
-		square.style.width = "5%";
-		square.style.height = "50px";
+		square.style.width = "2%";
+		square.style.height = "20px";
 		square.style.border = "1px solid grey";
 		square.style.background = "white";
 		square.style.float = "left";
