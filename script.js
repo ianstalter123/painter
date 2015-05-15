@@ -3,22 +3,39 @@ console.log("JavaScript is alive");
 
 var currentColor = 'blue';
 
-var paint= function()
-{
+var paint= function() {
 var grid = document.querySelectorAll("div");
 for(var i = 0; i < grid.length; i++)
 {
 grid[i].addEventListener("mousedown", function(){
-
 this.style.background = currentColor;
- console.log("hello");
 
-
-})
-}
-}
-var makePalette = function(color)
+for(var i = 0; i < grid.length; i++)
 {
+grid[i].className = grid[i].className + "drag";
+
+}
+})
+
+grid[i].addEventListener("mouseover", function(event) 
+	{
+		if(this.className === "drag")
+		{
+		this.style.background = currentColor;}}, false);
+
+grid[i].addEventListener("mouseup", function(){
+this.style.background = currentColor;
+
+for(var i = 0; i < grid.length; i++)
+{
+grid[i].className = "";
+}
+})
+
+
+}}
+
+var makePalette = function(color) {
 var square = document.createElement("div");
 		square.style.width = "3%";
 		square.style.height = "50px";
@@ -31,8 +48,7 @@ var square = document.createElement("div");
 })
 		document.body.appendChild(square);
 }
-var makeGrid = function()
-{
+var makeGrid = function() {
 var bod = document.querySelector("body");
 for (var i =0 ; i<30; i++)
 {
